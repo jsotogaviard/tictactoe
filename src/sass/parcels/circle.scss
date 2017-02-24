@@ -1,0 +1,30 @@
+%circle {
+  border-radius: 25px;
+  height: 20px;
+  width: 20px;
+}
+
+#error-circle {
+  @extend %circle;
+  background: $color-error;
+}
+
+#available-circle {
+  @extend %circle;
+  background: $color-available;
+}
+
+#goingtoget-circle {
+  @extend %circle;
+  background: $color-gtg;
+}
+
+#break-circle {
+  @extend %circle;
+  background: $color-break;
+}
+
+#onboard-circle {
+  @extend %circle;
+  background: $color-onboard;
+}

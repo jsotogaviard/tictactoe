@@ -1,0 +1,33 @@
+%chat {
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.chat-driver {
+  @extend %chat;
+  background-color: $color-chat-driver;
+  margin-left: .5em;
+  margin-right: 3em;
+}
+
+.chat-snapcar {
+  @extend %chat;
+  background-color: $color-chat-snapcar;
+  margin-left: 3em;
+  margin-right: .5em;
+}
+
+.chats-scrollable-list {
+  max-height: calc(80vh - 170px);
+  min-height: 21em;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.unread-driver {
+  background-color: $color-chat-unread-driver;
+}
+
+.unread-snapcar {
+  background-color: $color-chat-unread-snapcar;
+}

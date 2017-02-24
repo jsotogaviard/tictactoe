@@ -1,0 +1,264 @@
+//colors
+$white: #fff;
+$black_10: rgba(0,0,0,.1);
+$color_alabaster_approx: #f9f9f9;
+$color_gallery_approx: #eeeeee;
+$color_mountain_mist_approx: #999999;
+$color_boston_blue_approx: #428bca;
+$black_20: rgba(0, 0, 0, 0.2);
+$black_25: rgba(0, 0, 0, 0.25);
+
+//@extend-elements
+//original selectors
+//.rdtPicker td.rdtActive, .rdtPicker td.rdtActive:hover
+%extend_1 {
+	background-color: $color_boston_blue_approx;
+	color: $white;
+	//Instead of the line below you could use @include text-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	text-shadow: 0 -1px 0 $black_25;
+}
+
+//original selectors
+//.rdtPicker td.rdtDisabled, .rdtPicker td.rdtDisabled:hover
+%extend_2 {
+	background: none;
+	color: $color_mountain_mist_approx;
+	cursor: not-allowed;
+}
+
+//original selectors
+//.rdtPicker td span.rdtDisabled, .rdtPicker td span.rdtDisabled:hover
+%extend_3 {
+	background: none;
+	color: $color_mountain_mist_approx;
+	cursor: not-allowed;
+}
+
+//original selectors
+//.rdtPicker th.rdtDisabled, .rdtPicker th.rdtDisabled:hover
+%extend_4 {
+	background: none;
+	color: $color_mountain_mist_approx;
+	cursor: not-allowed;
+}
+
+//original selectors
+//td.rdtMonth, td.rdtYear
+%extend_5 {
+	height: 50px;
+	width: 25%;
+	cursor: pointer;
+}
+
+
+.rdt {
+	position: relative;
+}
+.rdtPicker {
+	display: none;
+	position: absolute;
+	width: 250px;
+	padding: 4px;
+	margin-top: 1px;
+	z-index: 99999 !important;
+	background: $white;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: 0 1px 3px $black_10;
+	border: 1px solid $color_alabaster_approx;
+	.rdtTimeToggle {
+		text-align: center;
+		&:hover {
+			background: $color_gallery_approx;
+			cursor: pointer;
+		}
+	}
+	table {
+		width: 100%;
+		margin: 0;
+	}
+	td {
+		text-align: center;
+		height: 28px;
+		cursor: pointer;
+		&.rdtOld {
+			color: $color_mountain_mist_approx;
+		}
+		&.rdtNew {
+			color: $color_mountain_mist_approx;
+		}
+		&.rdtToday {
+			position: relative;
+			&:before {
+				content: '';
+				display: inline-block;
+				border-left: 7px solid transparent;
+				border-bottom: 7px solid $color_boston_blue_approx;
+				border-top-color: $black_20;
+				position: absolute;
+				bottom: 4px;
+				right: 4px;
+			}
+		}
+		&.rdtActive {
+			@extend %extend_1;
+			&:hover {
+				@extend %extend_1;
+			}
+			&.rdtToday:before {
+				border-bottom-color: $white;
+			}
+		}
+		&.rdtDisabled {
+			@extend %extend_2;
+			&:hover {
+				@extend %extend_2;
+			}
+		}
+		span {
+			&.rdtOld {
+				color: $color_mountain_mist_approx;
+			}
+			&.rdtDisabled {
+				@extend %extend_3;
+				&:hover {
+					@extend %extend_3;
+				}
+			}
+		}
+		&.rdtDay:hover {
+			background: $color_gallery_approx;
+			cursor: pointer;
+		}
+		&.rdtHour:hover {
+			background: $color_gallery_approx;
+			cursor: pointer;
+		}
+		&.rdtMinute:hover {
+			background: $color_gallery_approx;
+			cursor: pointer;
+		}
+		&.rdtSecond:hover {
+			background: $color_gallery_approx;
+			cursor: pointer;
+		}
+	}
+	th {
+		text-align: center;
+		height: 28px;
+		border-bottom: 1px solid $color_alabaster_approx;
+		&.rdtSwitch {
+			width: 100px;
+		}
+		&.rdtNext {
+			font-size: 21px;
+			vertical-align: top;
+		}
+		&.rdtPrev {
+			font-size: 21px;
+			vertical-align: top;
+		}
+		&.rdtDisabled {
+			@extend %extend_4;
+			&:hover {
+				@extend %extend_4;
+			}
+		}
+	}
+	.dow {
+		width: 14.2857%;
+		border-bottom: none;
+	}
+	thead {
+		button {
+			width: 100%;
+			height: 100%;
+		}
+		tr:first-child th {
+			cursor: pointer;
+			&:hover {
+				background: $color_gallery_approx;
+			}
+		}
+	}
+	tfoot {
+		border-top: 1px solid $color_alabaster_approx;
+	}
+	button {
+		border: none;
+		background: none;
+		cursor: pointer;
+		&:hover {
+			background-color: $color_gallery_approx;
+		}
+	}
+}
+td {
+	&.rdtMonth {
+		@extend %extend_5;
+		&:hover {
+			background: $color_gallery_approx;
+		}
+	}
+	&.rdtYear {
+		@extend %extend_5;
+		&:hover {
+			background: $color_gallery_approx;
+		}
+	}
+}
+.rdtCounters {
+	display: inline-block;
+	> div {
+		float: left;
+	}
+}
+.rdtCounter {
+	height: 100px;
+	width: 40px;
+	.rdtBtn {
+		height: 40%;
+		line-height: 40px;
+		cursor: pointer;
+		display: block;
+		//Instead of the line below you could use @include user-select($select)
+		user-select: none;
+		&:hover {
+			background: $color_gallery_approx;
+		}
+	}
+	.rdtCount {
+		height: 20%;
+		font-size: 1.2em;
+	}
+}
+.rdtCounterSeparator {
+	line-height: 100px;
+}
+.rdtMilli {
+	vertical-align: middle;
+	padding-left: 8px;
+	width: 48px;
+	input {
+		width: 100%;
+		font-size: 1.2em;
+		margin-top: 37px;
+	}
+}
+.rdtOpen .rdtPicker {
+	display: block;
+}
+.rdtStatic .rdtPicker {
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none;
+	position: static;
+}
+.rdtPrev span {
+	display: block;
+	//Instead of the line below you could use @include user-select($select)
+	user-select: none;
+}
+.rdtNext span {
+	display: block;
+	//Instead of the line below you could use @include user-select($select)
+	user-select: none;
+}

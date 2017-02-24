@@ -1,0 +1,14 @@
+.landing-signin {
+  background-color: $color-snapcar;
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+
+  .control-label {
+    color: $color-white;
+  }
+
+  .form-group {
+    margin-bottom: 2em;
+  }
+}

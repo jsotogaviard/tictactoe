@@ -1,0 +1,20 @@
+{
+  "game": {
+    "id" : "id",
+    "name" : "nom",
+    "arcade" : "arcade",
+    "size" : "taille",
+    "winner": "Gagnat",
+    "status": "statut"
+  },
+  "login" : {
+    "email" : "Email",
+    "password" : "Mot de passe",
+    "signin" : "Log in"
+  },
+  "locale" :{
+    "locale" : "Language",
+    "en_us" : "English",
+    "fr_fr" : "French"
+  }
+}

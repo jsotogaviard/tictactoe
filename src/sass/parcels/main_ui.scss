@@ -1,0 +1,72 @@
+// make drivers'list scrollable
+.drivers-scrollable-list {
+  height: calc(80vh - 170px);
+  min-height: 21em;
+  overflow-y: scroll;
+}
+
+// make sure icons get enough space, mostly for touch-friendly UI
+td {
+  span {
+    .glyphicon {
+      font-size: 16px;
+      margin: 4px;
+    }
+  }
+}
+
+.gm-style {
+  img {
+    filter: grayscale(.5);
+  }
+}
+
+%timeleft {
+  text-align: center;
+}
+
+.timeleft-created {
+  @extend %timeleft;
+  background-color: $color-eta-created;
+}
+
+.timeleft-delay {
+  @extend %timeleft;
+  background-color: $color-eta-delay;
+  color: $color-white;
+}
+
+.timeleft-late {
+  @extend %timeleft;
+  background-color: $color-eta-error;
+  color: $color-white;
+  font-weight: bold;
+}
+
+.timeleft-ontime {
+  @extend %timeleft;
+  background-color: $color-eta-ok;
+}
+
+.timeleft-waiting {
+  @extend %timeleft;
+  background-color: $color-eta-warn;
+  font-weight: bold;
+}
+
+.additional_info {
+  @extend %timeleft;
+  background-color: $color-additional-info;
+}
+
+.fake-partner {
+  background-color: $color-fake-partner;
+}
+
+.cancelled_booking {
+  background-color: $color-booking-cancelled;
+}
+
+.selected-driver {
+  background-color: $color-selected-driver;
+}

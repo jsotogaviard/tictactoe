@@ -1,0 +1,21 @@
+{
+  "game": {
+    "id" : "id",
+    "name" : "name",
+    "arcade" : "arcade",
+    "size" : "size",
+    "winner": "winner",
+    "status": "status"
+  },
+  "login" : {
+    "email" : "Email",
+    "welcome" : "Scom Sign in",
+    "password" : "Password",
+    "signin" : "Sign in"
+  },
+  "locale" :{
+    "locale" : "langue",
+    "en_us" : "Anglais",
+    "fr_fr" : "Francais"
+  }
+}

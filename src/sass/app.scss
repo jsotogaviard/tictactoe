@@ -1,0 +1,19 @@
+// Variables
+@import 'vars';
+
+// Base boostrap
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
+
+// SCOM customs
+@import './parcels/colors';
+@import './parcels/main_ui';
+@import './parcels/sign_in';
+@import './parcels/circle';
+@import './parcels/chat';
+@import './parcels/login';
+@import './parcels/action_panels';
+
+// vendors
+@import './vendors/react_datetime';
+@import './vendors/switch';
+@import '../../node_modules/react-select/scss/default';

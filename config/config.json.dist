@@ -1,0 +1,15 @@
+{
+  "intl" : "./dist/intl/*.json",
+  "log_level" : "debug",
+  "port" : 8001,
+  "base" : "./dist",
+  "db" : {
+    "user": "postgres",
+    "database": "tictactoe",
+    "password": "postgres",
+    "host": "localhost",
+    "port": 5433,
+    "max": 10,
+    "idleTimeoutMillis": 30000
+  }
+}

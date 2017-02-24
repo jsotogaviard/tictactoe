@@ -1,0 +1,21 @@
+# OSX
+.DS_Store
+
+# Project specific
+dist
+dist-tests
+npm-debug.log
+config/config.json
+
+# WebStorm
+######################
+.idea
+
+# JS
+######################
+node_modules
+bower_components
+
+# npm
+#####################
+.npmrc
