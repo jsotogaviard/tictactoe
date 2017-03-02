@@ -72,7 +72,8 @@
     "vinyl-source-stream": "*"
   },
   "scripts": {
-    "preinstall": "npm install server"
+    "preinstall": "npm install server",
+    "tictactoe": "gulp"
   },
   "author": "SnapCar"
 }
