@@ -1,7 +1,7 @@
 import React from "react"
 import {FormattedMessage} from "react-intl"
 import {Table} from "react-bootstrap"
-import {Grid, Row, Col, Checkbox, FormGroup, ControlLabel, FormControl} from 'react-bootstrap';
+import {Grid, Row, Col, Checkbox, FormGroup, ControlLabel, FormControl, Panel} from 'react-bootstrap';
 import scomSocketClientInstance from "../services/ScomSocketClient";
 import dataStoreInstance from "../stores/DataStore.js";
 import Game from "./Game.react";
@@ -53,16 +53,17 @@ class Games extends React.Component {
         }
 
         return (
-            <Table striped bordered condensed hover responsive>
-                <thead>
-                <tr>
-                    {reactHeaders}
-                </tr>
-                </thead>
-                <tbody>
-                {reactGames}
-                </tbody>
-            </Table>)
+                <Table striped bordered condensed hover responsive>
+                    <thead>
+                    <tr>
+                        {reactHeaders}
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {reactGames}
+                    </tbody>
+                </Table>
+        )
     }
 }
 

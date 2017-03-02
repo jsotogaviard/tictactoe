@@ -33,7 +33,7 @@ class Game extends React.Component {
             let winnerId = id + '-winner'
             let statusId = id + '-status'
 
-            return (<tr bsStyle={message} key={id} onClick={this.goToGame.bind(this, this.props.game.game_id)}>
+            return (<tr bsStyle="danger" key={id} onClick={this.goToGame.bind(this, this.props.game.game_id)}>
                 <td key={gameId}>{this.props.game.game_id}</td>
                 <td key={nameId}>{this.props.game.name}</td>
                 <td key={arcadeId}>{this.props.game.arcade}</td>

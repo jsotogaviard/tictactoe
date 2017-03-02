@@ -1,6 +1,5 @@
 import React from "react";
-import {Table} from "react-bootstrap";
-import {Glyphicon} from 'react-bootstrap';
+import {Table, Glyphicon, Panel} from "react-bootstrap";
 import scomActionsInstance from "../actions/ScomActions";
 
 class GamesDetails extends React.Component {
@@ -55,11 +54,13 @@ class GamesDetails extends React.Component {
                 }
                 table.push(<tr>{column}</tr>)
             }
-            return (<Table striped bordered condensed hover responsive>
-                <tbody>
-                {table}
-                </tbody>
-            </Table>)
+            return (
+                    <Table striped bordered condensed hover responsive>
+                        <tbody>
+                        {table}
+                        </tbody>
+                    </Table>
+            )
         }
     }
 }
