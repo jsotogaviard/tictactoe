@@ -34,7 +34,7 @@ class Login extends React.Component {
         return (
           <div className="landing-signin">
             <Form className="form-signin">
-                <Image src="/img/snapcar.png" responsive />
+                <Image src="/img/tictactoe.png" responsive />
                 <FormGroup className="form-signin" controlId="formHorizontalEmail">
                   <ControlLabel>{email}</ControlLabel>
                   <FormControl
